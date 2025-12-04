@@ -22,6 +22,6 @@ fn main() -> Result<()> {
         .header(COOKIE, format!("session={session}"))
         .send()?
         .text()?;
-    println!("{}", puzzle_input);
+    print!("{}", puzzle_input);
     Ok(())
 }

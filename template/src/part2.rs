@@ -1,3 +1,5 @@
+use day_xx::parse_input;
+
 pub fn process(data: &str) -> usize {
     0
 }
