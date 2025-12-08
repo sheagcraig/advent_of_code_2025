@@ -25,13 +25,13 @@ pub fn process(data: &str) -> usize {
                 paths += dfs(row + 1, beam_index - 1, width, map, cache);
                 paths += dfs(row + 1, beam_index + 1, width, map, cache);
             }
-            _ => paths += dfs(row + 1, beam_index, width, &map, cache),
+            _ => paths += dfs(row + 1, beam_index, width, map, cache),
         }
         cache.insert((row, beam_index), paths);
         paths
     }
 
-    let width = map[0].len();
+    let width = map.len();
     let mut cache = HashMap::new();
 
     dfs(0, start, width, &map, &mut cache)
